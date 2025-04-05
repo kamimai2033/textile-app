@@ -1,0 +1,39 @@
+<!-- index.html - 衣類管理アプリ（構造分割版） -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>衣類管理アプリ</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>衣類登録</h1>
+  <form id="addForm">
+    <label>種類:
+      <select id="type"></select>
+    </label><br>
+    <label>購入日: <input type="date" id="buyDate" required></label><br>
+    <label>価格（円）: <input type="number" id="price" required></label><br>
+    <button type="submit">登録</button>
+  </form>
+
+  <h2>登録済み衣類</h2>
+  <button id="deleteSelected">選択削除</button>
+  <table id="clothTable">
+    <thead>
+      <tr>
+        <th>選択</th><th>種類</th><th>購入日</th><th>使用期限</th><th>価格</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <h2>種類の追加（設定）</h2>
+  <form id="typeForm">
+    <label>新しい種類: <input type="text" id="newType" required></label>
+    <button type="submit">追加</button>
+  </form>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
